@@ -1,0 +1,24 @@
+{
+  "categorias": [
+    {
+      "nome": "Restaurantes e Bares",
+      "descricao": "Lugares para alimentação/bebidas",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nome": "Shoppings",
+      "descricao": "Lugares para fazer compras e passear"
+    },
+    {
+      "id": "5499",
+      "nome": "Praias",
+      "descricao": "Lugares para curtir um mar com a família/amigos"
+    },
+    {
+      "id": "56d8",
+      "nome": "Teste",
+      "descricao": "teste"
+    }
+  ]
+}
