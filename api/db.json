@@ -20,5 +20,15 @@
       "nome": "Teste",
       "descricao": "teste"
     }
+  ],
+  "lugares": [
+    {
+      "id": "412f",
+      "nome": "Bar do Toinzin",
+      "categoria": "Restaurantes e Bares",
+      "localizacao": "Guará II",
+      "urlFoto": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nroIRNYPiOIZRaiL-CLS25eGtSO-Je15RoIcQAQvbCIadnuunx6qGvYDSLnW9_TUBc5GsyECEIPxsoR_PGmJ_Ow5k38QMYwi2YQXn2uuyxmpDEtz33-aRM_yLVl3yibeyVRvuyj=s680-w680-h510-rw",
+      "avaliacao": "5"
+    }
   ]
 }

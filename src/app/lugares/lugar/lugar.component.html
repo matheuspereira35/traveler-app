@@ -3,7 +3,7 @@
   <hr />
 
   <form id="lugarForm" [formGroup]="camposForm" (ngSubmit)="salvar()">
-    <div class="mb-4">
+    <div class="mb-4 mt-4">
       <label for="nome" class="block text-gray-600 font-medium mb-2"
         >Nome do Lugar</label
       >
@@ -15,11 +15,23 @@
         placeholder="Ex: Praia do sol, Restaurante Estrela"
         class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
       />
+      <span class="text-red-500" *ngIf="isCampoInvalido('nome')"> Campo Obrigatório! </span>
     </div>
     <div class="mb-4">
       <label for="categoria" class="block text-gray-600 font-medium mb-2"
         >Categoria</label
       >
+      <select
+        name="categoria"
+        id="categoria"
+        formControlName="categoria"
+        class="w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+      >
+        <option *ngFor="let cat of categorias" [value]="cat.nome">
+          {{ cat.nome }}
+        </option>
+      </select>
+      <span class="text-red-500" *ngIf="isCampoInvalido('categoria')"> Campo Obrigatório! </span>
     </div>
 
     <div class="mb-4">
@@ -34,11 +46,12 @@
         placeholder="Ex: Porto Seguro"
         class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
       />
+      <span class="text-red-500" *ngIf="isCampoInvalido('localizacao')"> Campo Obrigatório! </span>
     </div>
- 
+
     <div class="mb-4">
       <label for="nome" class="block text-gray-600 font-medium mb-2"
-        >URL da Foto</label
+        >Foto</label
       >
       <input
         type="text"
@@ -48,19 +61,32 @@
         placeholder="Ex: http://exemplo.com/foto.jpg"
         class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
       />
+      <span class="text-red-500" *ngIf="isCampoInvalido('urlFoto')"> Campo Obrigatório! </span>
     </div>
 
-     <div class="mb-4">
+    <div class="mb-4">
       <label for="avaliacao" class="block text-gray-600 font-medium mb-2"
         >Avaliação</label
       >
+      <select
+        name="avaliacao"
+        id="avaliacao"
+        formControlName="avaliacao"
+        class="w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+      >
+        <option [value]="1">1 - Ruim</option>
+        <option [value]="2">2 - Regular</option>
+        <option [value]="3">3 - Bom</option>
+        <option [value]="4">4 - Muito bom</option>
+        <option [value]="5">5 - Excelente</option>
+      </select>
+      <span class="text-red-500" *ngIf="isCampoInvalido('avaliacao')"> Campo Obrigatório! </span>
     </div>
+    <button
+      type="submit"
+      class="w-full bg-blue-600 text-white font-semibold p-3 rounded shadow hover:bg-blue-700"
+    >
+      Cadastrar Lugar
+    </button>
   </form>
-
-  <button
-    type="submit"
-    class="w-full bg-blue-600 text-white font-semibold p-3 rounded shadow hover:bg-blue-700"
-  >
-    Cadastrar Lugar
-  </button>
 </div>
